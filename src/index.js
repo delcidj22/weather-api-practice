@@ -22,7 +22,7 @@ $(document).ready(function () {
     request.send();
 
     function getElements(response) {
-      $('.showHumidity').text(`The humidity in ${city} is ${response.main.humidity}%`);
+      $('.showHumidity').text(`The weather description in ${city} is: ${response.weather[0].description}`);
       $('.showTemp').text(`The temperature in Kelvins is ${response.main.temp} degrees.`);
     }
   });
